@@ -13,8 +13,8 @@
 - Cut threshold: see LEARNING_RULES.md section 14
 - Current sprint: Sprint 01 — Baseline Assessment and Java Foundations
 - Current phase: Phase 1 — Java Core and Computer Science
-- Overall status: Not assessed
-- Last review date: Not started
+- Overall status: In progress — Week 1 extended by one week (Module 0 added)
+- Last review date: 2026-11-17 (Week 1)
 - Planned weekly capacity: 6–8 focused hours
 
 ## Competency tracker
@@ -25,7 +25,7 @@
 | Java build and execution (Module 0, step 1) | Pass | exercises/week1/: stale-.class experiment (edited Main.java without recompiling; `java Main` loaded old classes from `.`, `java -cp build Main` loaded new ones); learner explained .class, recompilation, and classpath; explained that code using Java 25 features can fail to build on a Java 21 server. Needed a hint to distinguish `which java` (binary path) from `java -version` (version) | 2026-11-12 | Module 0, step 2: reading compile-time vs runtime errors |
 | Reading compile-time and runtime errors (Module 0, step 2) | Pass | exercises/week1/: triggered missing import (javac, TotalCalculator.java:3), `new Circle(-1)` (runtime IllegalArgumentException, read stack trace Circle.java:6 ← Main.java:6), misspelled main class (ClassNotFoundException, no user frames). Initially said the missing-import error happened in the JRE; corrected after feedback and then independently explained that a failed javac leaves the previous .class files in place | 2026-11-12 | Placement test for Module 0 steps 3–7 |
 | Module 0 placement, steps 3–7 | Pass for steps 3, 4, 5, 7; step 6 (String) Pass — 2026-11-16, exercises/module0/step6/: predicted `==`/`equals()` correctly and explained reference vs content comparison and the String pool (15 min); `isPalindrome` two-pointer loop, first version was case-sensitive and tested on self-chosen cases only; after review fixed with `toLowerCase()`, tested the required cases ("Level" true, "abc" false, "" true; verified by agent run) and explained why "" is a palindrome. Module 0 gate met | exercises/module0/placement/ (Scores.java, Main.java): 20 minutes; hand-computed 6.333…, 4, "Trung binh" matched output; avoided integer division with `(double) sum / length`; explained throwing on an empty array as "no meaningful average". Review notes: countPassed throws on empty input (0 would be natural), individual scores not range-checked, 0/10 repeated as magic numbers. Needed help with packages and classpath when running; then independently wrote `java -cp out com.careerbank.App` for a new package/classpath case | 2026-11-16 | Module 0 complete; continue with Week 1 (Shape validation) |
-| Java Collections | Not assessed | — | — | Lesson 1: array vs List (why totalArea takes List<IShape>) |
+| Java Collections | Partial (lessons 1–2 of List/Set/Map/Queue done) | Lesson 2 (Set), exercises/week1/collections/SetDemo.java (2026-11-17): wrote predictions before running; add returned true/true/false as predicted; observed HashSet vs LinkedHashSet order; timed List vs Set contains over 1M items (predicted 1,000,000x, measured ~600–700x). Answered that equals() (not hashCode()) confirms a duplicate; chose Set<String> for registered emails. First explanation cited resize instead of lookup cost; after a hint explained List compares item by item while HashSet jumps to the bucket via the hash. Did not state the growth explicitly (1,000 → 1,000,000 users means 1000x more comparisons for List). Depth agreed with learner: concept level only (no bit masks, load-factor constants, JIT timing). Lesson 1, exercises/week1/collections/ListVsArray.java (2026-11-17): predicted arr[3] fails at runtime, not compile time; ran and read ArrayIndexOutOfBoundsException (ListVsArray.java:9); ArrayList size/add/add(index) output correct. Predictions for parts 2–3 not written down before running. Needed a hint to explain why javac cannot catch index errors (values only known at runtime); described ArrayList growth but omitted copying old elements until corrected. Package/classpath: still mixed folder paths and package names in the run command (3 attempts) | 2026-11-17 | Lesson 3: Map (key → value, counting) |
 | Generics and Exceptions | Not assessed | — | — | Baseline diagnostic |
 | equals/hashCode and immutability | Not assessed | — | — | Baseline diagnostic |
 | Data Structures and Algorithms | Not assessed | — | — | Baseline diagnostic |
@@ -51,9 +51,18 @@
 ## Weekly log
 
 ### Week 0 — Setup
-- Status: Not started
-- Evidence:
-- Notes:
+- Status: Done (2026-11-12)
+- Evidence: Learning OS created and revised; CareerBank code deleted to restart from zero.
+
+### Week 1 — 2026-11-12 to 2026-11-17 (review 2026-11-17)
+- Time: planned 7 h; actual ~8 h, self-reported (4 sessions of ~2 h). Fewer, longer sessions than the planned 5 weekday sessions.
+- Completed: Module 0 (steps 1–2, placement for steps 3–7, String check) — Pass; Java OOP (Shape exercise with validation) — Pass; repo moved to root and pushed.
+- Not completed: rest of Week 1 topics (Collections, Generics, Exceptions, equals/hashCode, immutability, Streams). Cause: Module 0 was added mid-week, not low effort.
+- Biggest obstacle (learner): building and running from the terminal — did not remember `javac -d build ...` and the `java -cp` form at first.
+- AI usage: ChatGPT used to explain some side theory; no exercise code reported as AI-generated.
+- Coaching feedback: current teaching style works; learner keeps the main points.
+- Adjustment for next week: start each session with a 2-minute recall — write the compile and run commands for the current exercise from memory before looking anything up.
+- Plan change: Week 1 extended by one week; overall estimate moves toward 11–12 weeks.
 
 ## Current blockers
 
@@ -61,7 +70,7 @@
 
 ## Next single task
 
-Week 1, Collections lesson 1: array vs List. Learner first reasons about why `totalArea` takes `List<IShape>` instead of `IShape[]` (size, adding elements, API), then the agent teaches WHY and the mental model.
+Week 1, Collections lesson 3: Map. exercises/week1/collections/MapDemo.java — count login attempts per email with HashMap<String, Integer>; predictions written before running.
 
 ## CV evidence bank
 

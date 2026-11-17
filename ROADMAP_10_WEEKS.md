@@ -37,6 +37,8 @@ Hour budget per week (planning estimates, re-checked at each weekly review):
 
 Total: 68 hours. If a week's budget is not realistic, adjust the task size rather than adding hours.
 
+Review 2026-11-17: Module 0 used most of Week 1 (~8 h actual). Week 1 topics continue for one more week; the overall estimate moves toward 11–12 weeks.
+
 ## Module 0 — Foundations from zero (first part of Week 1, before any OOP)
 
 Each step ends with a small program the learner writes and explains in their own words. Do not move to the next step until the current one passes.
