@@ -39,6 +39,8 @@ Total: 68 hours. If a week's budget is not realistic, adjust the task size rathe
 
 Review 2026-11-17: Module 0 used most of Week 1 (~8 h actual). Week 1 topics continue for one more week; the overall estimate moves toward 11–12 weeks.
 
+Review 2026-11-25: extension week had ~4 h (holiday). Remaining Week 1 topics (immutability, Exceptions, Generics, Streams) move to 2026-11-25 to 2026-12-01; Week 2 starts about 2026-12-02. Overall estimate: 12 weeks.
+
 ## Module 0 — Foundations from zero (first part of Week 1, before any OOP)
 
 Each step ends with a small program the learner writes and explains in their own words. Do not move to the next step until the current one passes.

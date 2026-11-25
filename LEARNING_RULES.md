@@ -177,3 +177,14 @@ Never commit:
 - confidential screenshots or internal documents.
 
 Use synthetic data and sanitized examples. Keep secrets in local environment files excluded by `.gitignore`.
+
+## 16. Topic format (adopted 2026-11-20)
+
+The learner asked for less hand-typed code and more focus on understanding, business context, and choosing the right solution. Each topic now uses four parts in about 45–60 minutes:
+
+1. **Concept** (~25%): mechanism, system view, a banking example.
+2. **Read and predict** (~25%): the agent provides code; the learner predicts several outputs in one batch, then runs it.
+3. **Review flawed code** (~30%): the agent provides code with planted defects (the kind AI often generates); the learner finds and explains them.
+4. **Choose a solution** (~20%): business scenarios; the learner chooses and justifies.
+
+Hand-written code remains required where the competency is the code itself: fixing reviewed defects, Week 2 DSA problems, and timed exercises. Predict-then-run is kept because predictions expose misunderstandings (e.g. `null` vs `false`). One step per message still applies, but steps are larger and must teach something. Assessment rules do not change.
